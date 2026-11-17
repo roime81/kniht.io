@@ -1,0 +1,522 @@
+Here is the updated index.html with the Gmail logo
+(mailto:roimepuniran@gmail.com) and Phone logo (tel:+60132082468) placed
+directly underneath the Samwise Gamgee quote:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>kniht.io — @roime81</title>
+  <meta name="description" content="Selected open-source software and projects by @roime81." />
+
+  <!-- Pure Brain SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23ffffff'/%3E%3Cpath d='M30 13.5C23.5 13.5 18.5 17.5 17.5 23C13.5 24 11 27.8 11 32.2C11 36.8 13.5 40.5 17.2 42C18.8 46.5 22.8 49.5 27.5 49.5H30M34 13.5C40.5 13.5 45.5 17.5 46.5 23C50.5 24 53 27.8 53 32.2C53 36.8 50.5 40.5 46.8 42C45.2 46.5 41.2 49.5 36.5 49.5H34M32 13.5V49.5M21 20.5C24 20.5 25.5 23 24 25.5M43 20.5C40 20.5 38.5 23 40 25.5M17.5 31C20.5 29.5 24 31 23.5 34M46.5 31C43.5 29.5 40 31 40.5 34M20.5 40.5C23.5 40 25.5 42 24.5 44.5M43.5 40.5C40.5 40 38.5 42 39.5 44.5' fill='none' stroke='%230f172a' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-subtle: #f8fafc;
+      --border: #e2e8f0;
+      --border-hover: #0f172a;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --text-soft: #64748b;
+      --shadow: 0 10px 28px -10px rgba(15, 23, 42, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .nav {
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .gh-link {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: all 0.15s ease;
+    }
+
+    .gh-link:hover {
+      color: var(--text);
+      border-color: var(--border-hover);
+      background: var(--bg-subtle);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 56px 0 36px;
+      text-align: center;
+    }
+
+    .hero-icon {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 20px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      display: grid;
+      place-items: center;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.02rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .hero-contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .contact-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      display: grid;
+      place-items: center;
+      transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+    }
+
+    .contact-btn:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow);
+      background: var(--bg-subtle);
+    }
+
+    /* Software List / Grid */
+    main {
+      flex: 1;
+      padding: 16px 0 64px;
+    }
+
+    .repo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      align-items: start;
+    }
+
+    .repo-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 18px;
+      cursor: pointer;
+      transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+      user-select: none;
+    }
+
+    .repo-card:hover {
+      transform: translateY(-1px);
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow);
+    }
+
+    .repo-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .repo-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .sw-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      color: var(--text);
+      flex-shrink: 0;
+    }
+
+    .repo-title {
+      font-size: 1.02rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      word-break: break-word;
+    }
+
+    .repo-title:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .title-arrow {
+      font-size: 0.85rem;
+      color: var(--text-soft);
+      font-weight: 500;
+    }
+
+    .toggle-btn {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--text-soft);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      transition: background 0.15s ease, color 0.15s ease, transform 0.2s ease;
+    }
+
+    .repo-card:hover .toggle-btn {
+      background: var(--bg-subtle);
+      color: var(--text);
+    }
+
+    .repo-card.open .toggle-btn {
+      transform: rotate(180deg);
+      color: var(--text);
+    }
+
+    /* Hidden Description with Smooth Reveal */
+    .desc-wrap {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.22s ease;
+    }
+
+    .repo-card.open .desc-wrap {
+      grid-template-rows: 1fr;
+    }
+
+    .desc-inner {
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    .repo-desc {
+      padding-top: 12px;
+      margin-top: 12px;
+      border-top: 1px solid var(--border);
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      user-select: text;
+    }
+
+    .repo-desc.empty {
+      color: var(--text-soft);
+      font-style: italic;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px 0;
+      font-size: 0.86rem;
+      color: var(--text-soft);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    @media (max-width: 720px) {
+      .repo-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero {
+        padding: 40px 0 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Reusable Brain Logo Symbol -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+    <symbol id="brain-logo" viewBox="0 0 64 64">
+      <path d="M30 13.5C23.5 13.5 18.5 17.5 17.5 23C13.5 24 11 27.8 11 32.2C11 36.8 13.5 40.5 17.2 42C18.8 46.5 22.8 49.5 27.5 49.5H30"
+            fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M34 13.5C40.5 13.5 45.5 17.5 46.5 23C50.5 24 53 27.8 53 32.2C53 36.8 50.5 40.5 46.8 42C45.2 46.5 41.2 49.5 36.5 49.5H34"
+            fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M32 13.5V49.5" fill="none" stroke="#0f172a" stroke-width="2.3" stroke-linecap="round"/>
+      <path d="M21 20.5C24 20.5 25.5 23 24 25.5M43 20.5C40 20.5 38.5 23 40 25.5"
+            fill="none" stroke="#0f172a" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M17.5 31C20.5 29.5 24 31 23.5 34M46.5 31C43.5 29.5 40 31 40.5 34"
+            fill="none" stroke="#0f172a" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M20.5 40.5C23.5 40 25.5 42 24.5 44.5M43.5 40.5C40.5 40 38.5 42 39.5 44.5"
+            fill="none" stroke="#0f172a" stroke-width="2.2" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+
+  <header>
+    <div class="container nav">
+      <a href="#" class="brand">
+        <svg width="28" height="28" aria-hidden="true"><use href="#brain-logo"></use></svg>
+        <span>kniht.io</span>
+      </a>
+      <a href="https://github.com/roime81" target="_blank" rel="noopener noreferrer" class="gh-link">
+        github.com/roime81 ↗
+      </a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-icon">
+        <svg width="46" height="46" aria-label="kniht.io brain logo"><use href="#brain-logo"></use></svg>
+      </div>
+      <h1>kniht.io</h1>
+      <p>"That there's some good in this world, Mr. Frodo... and it's worth fighting for." - Samwise Gamgee</p>
+
+      <div class="hero-contact">
+        <!-- Gmail Logo Link -->
+        <a href="mailto:roimepuniran@gmail.com" class="contact-btn" title="roimepuniran@gmail.com" aria-label="Email roimepuniran@gmail.com">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#4285F4" d="M2 8.2V17.5C2 18.33 2.67 19 3.5 19H6.5V11.575L2 8.2Z"/>
+            <path fill="#34A853" d="M22 8.2V17.5C22 18.33 21.33 19 20.5 19H17.5V11.575L22 8.2Z"/>
+            <path fill="#C5221F" d="M2 8.2V6.65C2 5.08 3.62 4.04 4.9 5.0L6.5 6.2V11.575L2 8.2Z"/>
+            <path fill="#FBBC05" d="M22 8.2V6.65C22 5.08 20.38 4.04 19.1 5.0L17.5 6.2V11.575L22 8.2Z"/>
+            <path fill="#EA4335" d="M6.5 11.575V6.2L12 10.325L17.5 6.2V11.575L12 15.7L6.5 11.575Z"/>
+          </svg>
+        </a>
+
+        <!-- Phone Logo Link -->
+        <a href="tel:+60132082468" class="contact-btn" title="60132082468" aria-label="Call 60132082468">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="container">
+      <div class="repo-grid" id="repo-grid"></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span style="display:inline-flex; align-items:center; gap:8px;">
+        <svg width="18" height="18" aria-hidden="true"><use href="#brain-logo"></use></svg>
+        <strong>kniht.io</strong>
+      </span>
+      <a href="https://github.com/roime81" target="_blank" rel="noopener noreferrer">
+        https://github.com/roime81/
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    const GITHUB_USER = 'roime81';
+    const grid = document.getElementById('repo-grid');
+
+    // Dedicated icon paths for each software
+    const ICONS = {
+      orbit: '<circle cx="12" cy="12" r="4.5"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-25 12 12)"/>',
+      api: '<polyline points="8 7 3 12 8 17"/><polyline points="16 7 21 12 16 17"/><line x1="13.5" y1="5" x2="10.5" y2="19"/>',
+      compass: '<circle cx="12" cy="12" r="9"/><polygon points="15.5 8.5 13.5 13.5 8.5 15.5 10.5 10.5 15.5 8.5"/>',
+      pulse: '<path d="M3 12h4l2.5-6 4 12 2.5-6H21"/>',
+      canvas: '<rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 14l3-3 3 3 4-4"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="18" x2="12" y2="21"/>',
+      cloud: '<path d="M17.5 18H7a4.5 4.5 0 0 1-.4-8.98A5.5 5.5 0 0 1 17.3 10.2 3.9 3.9 0 0 1 17.5 18z"/>',
+      chef: '<path d="M6 3v7a3 3 0 0 0 6 0V3"/><line x1="9" y1="3" x2="9" y2="21"/><path d="M18 3v18"/><path d="M18 3c-2 2-2.5 5-2.5 7.5H18"/>',
+      bulb: '<path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.86c.62.46 1 1.18 1 1.95V16h5v-.19c0-.77.38-1.49 1-1.95A6 6 0 0 0 12 3z"/>',
+      neuron: '<circle cx="12" cy="5" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><circle cx="12" cy="12.5" r="2"/><line x1="12" y1="7" x2="12" y2="10.5"/><line x1="10.4" y1="13.8" x2="6.5" y2="16.7"/><line x1="13.6" y1="13.8" x2="17.5" y2="16.7"/>',
+      wrench: '<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-5.6 5.6a1.5 1.5 0 0 0 2.1 2.1l5.6-5.6a4 4 0 0 0 5.4-5.4l-2.3 2.3-2.1-2.1 2.3-2.3z"/>'
+    };
+
+    // Curated list of projects
+    const PROJECTS = [
+      { title: 'Galactica', repo: 'galactica', url: 'https://github.com/roime81/galactica', icon: 'orbit' },
+      { title: 'Randall House of API', repo: 'randall_house_of_api', url: 'https://github.com/roime81/randall_house_of_api', icon: 'api' },
+      { title: 'Wanderwise', repo: 'wanderwise', url: 'https://github.com/roime81/wanderwise', icon: 'compass' },
+      { title: 'MedVerseAI', repo: 'MedVerseAI', url: 'https://github.com/roime81/MedVerseAI', icon: 'pulse' },
+      { title: 'The Canvasium', repo: 'The-Canvasium', url: 'https://github.com/roime81/The-Canvasium', icon: 'canvas' },
+      { title: 'GAMGEE CLOUD', repo: 'GAMGEE-CLOUD', url: 'https://github.com/roime81/GAMGEE-CLOUD', icon: 'cloud' },
+      { title: 'Chef 360', repo: 'chief360', url: 'https://github.com/roime81/chief360', icon: 'chef' },
+      { title: 'GNIKNIHT', repo: 'GNIKNIHT', url: 'https://github.com/roime81/GNIKNIHT', icon: 'bulb' },
+      { title: 'HYPERNEURON', repo: 'hyperneuron', url: 'https://github.com/roime81/hyperneuron', icon: 'neuron' },
+      { title: 'TWINFixeno', repo: 'twinfixeno', url: 'https://github.com/roime81/twinfixeno', icon: 'wrench' }
+    ];
+
+    function escapeHtml(str) {
+      return String(str ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function renderIcon(key) {
+      return `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[key] || ICONS.api}</svg>`;
+    }
+
+    const descElements = new Map();
+
+    PROJECTS.forEach(project => {
+      const card = document.createElement('article');
+      card.className = 'repo-card';
+
+      card.innerHTML = `
+        <div class="repo-row">
+          <div class="repo-left">
+            <span class="sw-icon">${renderIcon(project.icon)}</span>
+            <a class="repo-title" href="${escapeHtml(project.url)}" target="_blank" rel="noopener noreferrer">
+              ${escapeHtml(project.title)} <span class="title-arrow">↗</span>
+            </a>
+          </div>
+          <button type="button" class="toggle-btn" aria-expanded="false" aria-label="Toggle description for ${escapeHtml(project.title)}">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+        </div>
+        <div class="desc-wrap">
+          <div class="desc-inner">
+            <p class="repo-desc empty">Loading description…</p>
+          </div>
+        </div>
+      `;
+
+      const link = card.querySelector('.repo-title');
+      const toggleBtn = card.querySelector('.toggle-btn');
+      const descEl = card.querySelector('.repo-desc');
+
+      descElements.set(project.repo.toLowerCase(), descEl);
+
+      link.addEventListener('click', e => e.stopPropagation());
+
+      card.addEventListener('click', () => {
+        const isOpen = card.classList.toggle('open');
+        toggleBtn.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      grid.appendChild(card);
+    });
+
+    async function syncDescriptions() {
+      try {
+        const res = await fetch(
+          `https://api.github.com/users/${encodeURIComponent(GITHUB_USER)}/repos?per_page=100`,
+          { headers: { Accept: 'application/vnd.github+json' } }
+        );
+        if (!res.ok) throw new Error();
+        const repos = await res.json();
+        const repoMap = new Map(repos.map(r => [r.name.toLowerCase(), r]));
+
+        for (const project of PROJECTS) {
+          const el = descElements.get(project.repo.toLowerCase());
+          const match = repoMap.get(project.repo.toLowerCase());
+          if (match && match.description) {
+            el.textContent = match.description;
+            el.classList.remove('empty');
+          } else {
+            el.textContent = 'View repository on GitHub for full details.';
+            el.classList.add('empty');
+          }
+        }
+      } catch {
+        for (const el of descElements.values()) {
+          el.textContent = 'View repository on GitHub for full details.';
+          el.classList.add('empty');
+        }
+      }
+    }
+
+    syncDescriptions();
+  </script>
+</body>
+</html>
